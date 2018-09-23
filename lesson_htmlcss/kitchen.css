@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+
+/* body全体のcss設定  */
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;  /* 文字色を少しグレーにする */
+    font-size: 14px;
+    background-color: #f0f0f0;  /* 背景色の指定 */
+    /* background-image: url(../images_kitchen/header_bg.jpg); */ /* 背景画像の指定 */
+}
+
+/* a要素のcss設定 */
+a {
+    color: #333;
+}
+
+a:visited {
+    color: #333;
+}
+
+/* a要素:hover疑似クラス => font太字、リンクのunderline消す */
+a:hover {
+    color: #333;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* h要素全体のcss設定 => 上マージンを0にする */
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+}
+
+/* p要素全体のcss設定 */
+p {
+    margin-top: 0;
+    line-height: 1.6;  /* 行間の指定 */
+}
+
+/* 画像の下にできる余白を消す */
+img {
+    vertical-align: bottom;
+}
+
+/* h2、h3要素の装飾 */
+#main h2 {
+    background: #fff;  /* 白 */
+    font-size: 20px;
+    padding: 8px 22px;  /* 余白： 上下 | 左右 */
+    border-radius: 2px;  /* 枠線の角を丸める */
+    border: 1px solid #956840;  /* 枠線：1px 実線 */
+}
+
+#main h3 {
+    font-size: 16px;
+    border-left: solid 3px #fa9786;  /* 左側枠線のみ */
+    padding: 4px 9px 4px 14px;  /* 余白：上 | 右 | 下 | 左 */
+}
+
+/* header部分のcss設定 */
+header {
+    width: 984px;
+    margin: 0 auto;　/* マージン：四辺すべてに適用、中央揃え */
+}
+
+header h1 {
+    margin: 5px 0 10px;  /* マージン：上 | 左右 | 下 | */
+}
+
+/* メニュー部分のcss設定 */
+#global_navi {
+    margin-bottom: 16px;　/* マージン： 下  */
+}
+
+#global_navi ul {
+    list-style: none;  /* リストの点を消す */
+    font-size: 0;  /* 半角スペース削除 */
+    margin: 0;
+    padding: 0;  /* 点があったスペースを消す */
+}
+
+#global_navi ul li {
+    font-size: 14px;  /* フォントサイズ復活 */
+    display: inline-block;  /* 横並びリスト */
+    width: 163px;  /* 984/6 */
+    margin-right: 1px;  /* 横並びリストの各間に1pxの空白を作る */ 
+    text-align: center;  /* 文字位置：中央 */
+}
+
+/* ナビゲーションのデザインを整える */
+#global_navi ul li a {
+    display: block;  /* 各a要素を横幅一杯に伸ばす */
+    padding: 10px 16px;  /* 余白： 上下 | 左右 */
+    background-color: #f0573e;
+    color: #fff;  /* 白 */
+    text-decoration: none;  /* リンクの下線を消す */
+    transition: background-color .2s linear;
+}
+
+/* 現在選択されているli要素 */
+#global_navi ul li.current a {
+    background-color: #fa9786;
+}
+
+/* a要素:hover疑似クラス */
+#global_navi ul li a:hover {
+    background-color: #fa9786;
+}
+
+/* main_visual領域 */
+#main_visual {
+    width: 984px;
+    height: 440px;
+    margin: 0 auto 25px;
+}
+
+/* wrapper領域 main + sidebar */
+#wrapper {
+    width: 984px;
+    margin: 0 auto;
+}
+
+#main {
+    width: 730px;
+    float: left;  /* 左寄せ */
+}
+
+#sidebar {
+    width: 220px;
+    float: right;  /* 右寄せ */
+}
+
+/* clearfix */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* clearfix 別方式
+#wrapper {
+  overflow: hidden;
+}
+*/
+
+/* 写真部分 */
+#point figure {
+    float: right;
+    margin-left: 16px;
+}
+
+/* 写真キャプション部分 */
+#point figcaption {
+    font-size: 12px;
+    color: #9C9689;
+    text-align: center;
+}
+
+/* お知らせ部分 */
+#news ul {
+    list-style: none;
+    padding: 0;
+}
+
+#news li {
+    margin-bottom: 10px;
+}
+
+#news li a {
+    margin-left: 15px;
+}
+
+/* サイドバー部分 */
+#side_banner ul {
+    list-style: none;   /* リストの点を消す */
+    padding: 0;  /* 点があったスペースを消す */
+}
+
+#side_banner {
+    margin-bottom: 30px;
+    border: 1px solid #956840;  /* 枠線 */
+    text-align: center;
+}
+
+#side_banner h2 {
+    background-color: #956840;
+    color: #fff;
+    padding: 7px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* フッター部分 */
+footer {
+    background-color: #956840;
+    text-align: center;
+}
+
+footer #footer_navi {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+}
+
+footer #footer_navi ul {
+    list-style: none;  /* リストの点を消す */
+    padding: 0;  /* 点があったスペースを消す */
+    margin: 0;
+    text-align: center;
+}
+
+footer #footer_navi li {
+    display: inline;
+    border-left: solid 1px #333;　/* 縦線- 左横 */
+    margin-left: 8px;
+    padding-left: 8px;
+    font-size: smaller;
+}
+
+footer #footer_navi li:last-child {
+  border-right: solid 1px #333;　/* 縦線- 右横 */
+  padding: 0 8px;
+}
+
+/* コピーライト部分 */
+footer small {
+    display: inline-block;
+    padding: 8px 0;
+    color: #fff;
+}
+

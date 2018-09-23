@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+
+/* body全体のcss設定  */
+body {
+    margin: 5, 5, 0;
+    padding: 0;
+    color: #333;  /* 文字色を少しグレーにする */
+    
+}
+
+/* header部分のcss設定 */
+header {
+    width: 1000px;
+    margin: 0 auto;　/* マージン：四辺すべてに適用、中央揃え */
+}
+
+header p {
+    margin: 5px 0 0px;  /* マージン：上 | 左右 | 下 | */
+    background-color: #ffcccc; 
+    font-size: 14px;
+}
+
+
+
+#wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#menu {
+    width: 300px;
+    float: right;  /* 右寄せ */
+    background-color: #ccccff; 
+}
+
+#main {
+    width: 700px;
+    float: left;  /* 左寄せ */
+    background-color: #ccffcc; 
+}
+
+/*clearfix */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* clearfix 別方式
+#wrapper {
+  overflow: hidden;
+}
+*/
+
+
+/* footer部分のcss設定 */
+footer {
+    width: 1000px;
+    margin: 0 auto;　/* マージン：四辺すべてに適用、中央揃え */
+}
+
+footer p {
+    margin: 0 0 10px;  /* マージン：上 | 左右 | 下 | */
+    background-color: #ffccff; 
+    font-size: 14px;
+}
